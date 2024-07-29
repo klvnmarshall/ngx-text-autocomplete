@@ -1,8 +1,11 @@
-# NgxInputAutocomplete
-
-![NgxInputAutocomplete](img.png)
+# NgxTextAutocomplete
 
 A angular directive for adding autocomplete functionality to text input elements using trigger characters inspired by [angular-text-input-autocomplete](https://github.com/mattlewis92/angular-text-input-autocomplete)
+
+![Text Autocomplete](https://raw.githubusercontent.com/klvnmarshall/ngx-text-autocomplete/main/projects/ngx-text-autocomplete/img.png)\
+
+## Demo
+[https://klvnmarshall.github.io/ngx-text-autocomplete](https://klvnmarshall.github.io/ngx-text-autocomplete)
 
 ## Installation
 
