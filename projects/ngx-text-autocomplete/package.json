@@ -9,7 +9,9 @@
     "to-px": "^1.1.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "textarea-caret": "^3.1.0",
+    "to-px": "^1.1.0"
   },
   "sideEffects": false
 }
