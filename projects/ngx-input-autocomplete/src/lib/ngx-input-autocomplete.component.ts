@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-input-autocomplete',
+  selector: 'ngx-input-autocomplete',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      ngx-input-autocomplete works!
-    </p>
-  `,
-  styles: ``
+  template: '<ng-content></ng-content>',
+  styles: `
+    :host {
+      position: relative;
+      display: block;
+    }
+  `
 })
 export class NgxInputAutocompleteComponent {
 

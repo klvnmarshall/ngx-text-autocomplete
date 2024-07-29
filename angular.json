@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ngx-input-autocomplete",
       "sourceRoot": "projects/ngx-input-autocomplete/src",
-      "prefix": "lib",
+      "prefix": "ngx-input",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -32,6 +32,16 @@
               "zone.js",
               "zone.js/testing"
             ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-input-autocomplete/**/*.ts",
+              "projects/ngx-input-autocomplete/**/*.html"
+            ],
+            "eslintConfig": "projects/ngx-input-autocomplete/eslint.config.js"
           }
         }
       }
@@ -65,7 +75,8 @@
               }
             ],
             "styles": [
-              "projects/demo/src/styles.scss"
+              "projects/demo/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -128,8 +139,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/demo/**/*.ts",
+              "projects/demo/**/*.html"
+            ],
+            "eslintConfig": "projects/demo/eslint.config.js"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
