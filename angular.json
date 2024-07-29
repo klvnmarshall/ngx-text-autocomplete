@@ -78,7 +78,11 @@
               "projects/demo/src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "to-px",
+              "textarea-caret"
+            ]
           },
           "configurations": {
             "production": {
