@@ -2,7 +2,7 @@ import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import {Subject} from "rxjs";
 
 @Component({
-  selector: 'ngx-input-autocomplete-menu',
+  selector: 'ngx-text-autocomplete-menu',
   standalone: true,
   imports: [],
   template: `
@@ -39,7 +39,7 @@ import {Subject} from "rxjs";
     }
   `
 })
-export class NgxInputAutocompleteMenuComponent {
+export class NgxTextAutocompleteMenuComponent {
   @ViewChild('dropdownMenu') dropdownMenuElement?: ElementRef<HTMLUListElement>;
   position: { top: number; left: number } | undefined
   selectChoice = new Subject<string>();

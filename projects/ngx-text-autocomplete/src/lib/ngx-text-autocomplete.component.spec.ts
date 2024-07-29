@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxInputAutocompleteComponent } from './ngx-input-autocomplete.component';
+import { NgxInputAutocompleteComponent } from './ngx-text-autocomplete.component';
 
 describe('NgxInputAutocompleteComponent', () => {
   let component: NgxInputAutocompleteComponent;

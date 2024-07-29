@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-input-autocomplete',
+  selector: 'ngx-text-autocomplete',
   standalone: true,
   imports: [],
   template: '<ng-content></ng-content>',
@@ -12,6 +12,6 @@ import { Component } from '@angular/core';
     }
   `
 })
-export class NgxInputAutocompleteComponent {
+export class NgxTextAutocompleteComponent {
 
 }

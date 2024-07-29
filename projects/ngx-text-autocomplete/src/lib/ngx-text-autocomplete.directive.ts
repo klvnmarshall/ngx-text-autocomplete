@@ -10,7 +10,7 @@ import {
   Output,
   ViewContainerRef
 } from '@angular/core';
-import {NgxInputAutocompleteMenuComponent} from "./ngx-input-autocomplete-menu.component";
+import {NgxTextAutocompleteMenuComponent} from "./ngx-text-autocomplete-menu.component";
 import {Subject, takeUntil} from "rxjs";
 import toPX from 'to-px';
 import getCaretCoordinates from 'textarea-caret';
@@ -25,10 +25,10 @@ export interface ChoiceSelectedEvent {
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: 'textarea[NgxInputAutocomplete], input[type="text"][NgxInputAutocomplete]',
+  selector: 'textarea[NgxTextAutocomplete], input[type="text"][NgxTextAutocomplete]',
   standalone: true
 })
-export class NgxInputAutocompleteDirective implements OnDestroy {
+export class NgxTextAutocompleteDirective implements OnDestroy {
 
   /**
    * The character that will trigger the menu to appear
@@ -54,7 +54,7 @@ export class NgxInputAutocompleteDirective implements OnDestroy {
    * The menu component to show with available options.
    * You can extend the built in `TextInputAutocompleteMenuComponent` component to use a custom template
    */
-  @Input() menuComponent = NgxInputAutocompleteMenuComponent;
+  @Input() menuComponent = NgxTextAutocompleteMenuComponent;
 
   /**
    * Called when the options menu is shown
@@ -83,7 +83,7 @@ export class NgxInputAutocompleteDirective implements OnDestroy {
 
   private menu:
     | {
-    component: ComponentRef<NgxInputAutocompleteMenuComponent>;
+    component: ComponentRef<NgxTextAutocompleteMenuComponent>;
     triggerCharacterPosition: number;
     lastCaretPosition?: number;
   }
@@ -95,7 +95,6 @@ export class NgxInputAutocompleteDirective implements OnDestroy {
 
   constructor(
     private viewContainerRef: ViewContainerRef,
-    private injector: Injector,
     private elm: ElementRef
   ) {
   }

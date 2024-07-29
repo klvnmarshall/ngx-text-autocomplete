@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-input-autocomplete": {
+    "ngx-text-autocomplete": {
       "projectType": "library",
-      "root": "projects/ngx-input-autocomplete",
-      "sourceRoot": "projects/ngx-input-autocomplete/src",
-      "prefix": "ngx-input",
+      "root": "projects/ngx-text-autocomplete",
+      "sourceRoot": "projects/ngx-text-autocomplete/src",
+      "prefix": "ngx-text",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngx-input-autocomplete/ng-package.json"
+            "project": "projects/ngx-text-autocomplete/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-input-autocomplete/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-text-autocomplete/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-input-autocomplete/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-text-autocomplete/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ngx-input-autocomplete/tsconfig.spec.json",
+            "tsConfig": "projects/ngx-text-autocomplete/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -38,10 +38,10 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/ngx-input-autocomplete/**/*.ts",
-              "projects/ngx-input-autocomplete/**/*.html"
+              "projects/ngx-text-autocomplete/**/*.ts",
+              "projects/ngx-text-autocomplete/**/*.html"
             ],
-            "eslintConfig": "projects/ngx-input-autocomplete/eslint.config.js"
+            "eslintConfig": "projects/ngx-text-autocomplete/eslint.config.js"
           }
         }
       }

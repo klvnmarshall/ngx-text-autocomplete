@@ -11,8 +11,8 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "paths": {
-      "ngx-input-autocomplete": [
-        "./dist/ngx-input-autocomplete"
+      "ngx-text-autocomplete": [
+        "./dist/ngx-text-autocomplete"
       ]
     },
     "esModuleInterop": true,

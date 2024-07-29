@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {NgxInputAutocompleteComponent} from "../../../ngx-input-autocomplete/src/public-api";
+import {NgxTextAutocompleteComponent} from "../../../ngx-text-autocomplete/src/public-api";
 import {FormsModule} from "@angular/forms";
-import {NgxInputAutocompleteDirective} from "../../../ngx-input-autocomplete/src/lib/ngx-input-autocomplete.directive";
+import {NgxTextAutocompleteDirective} from "../../../ngx-text-autocomplete/src/lib/ngx-text-autocomplete.directive";
 
 
 const languages = [
@@ -13,8 +13,8 @@ const languages = [
   selector: 'app-root',
   standalone: true,
   imports: [
-    NgxInputAutocompleteComponent,
-    NgxInputAutocompleteDirective,
+    NgxTextAutocompleteComponent,
+    NgxTextAutocompleteDirective,
     FormsModule
   ],
   templateUrl: './app.component.html',
