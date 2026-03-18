@@ -2,10 +2,9 @@ import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import {Subject} from "rxjs";
 
 @Component({
-  selector: 'ngx-text-autocomplete-menu',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'ngx-text-autocomplete-menu',
+    imports: [],
+    template: `
 
     @if (choices.length) {
       <ul
@@ -27,7 +26,7 @@ import {Subject} from "rxjs";
     }
 
   `,
-  styles: `
+    styles: `
     .dropdown-menu {
       display: block;
       max-height: 400px;
