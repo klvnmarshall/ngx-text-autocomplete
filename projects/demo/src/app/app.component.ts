@@ -10,18 +10,17 @@ const languages = [
 ]
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    NgxTextAutocompleteComponent,
-    NgxTextAutocompleteDirective,
-    FormsModule
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [
+        NgxTextAutocompleteComponent,
+        NgxTextAutocompleteDirective,
+        FormsModule
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
-
+  title = 'demo';
   formControlValue = '';
   triggerCharacter = '@'
 

@@ -99,8 +99,10 @@ export class NgxTextAutocompleteDirective implements OnDestroy {
   ) {
   }
 
-  @HostListener('keypress', ['$event.key'])
-  onKeypress(key: string) {
+  @HostListener('keypress', ['$event'])
+  onKeypress(event: Event) {
+    const kbEvent = event as KeyboardEvent;
+    const key = kbEvent.key;
     if (key === this.triggerCharacter) {
       this.usingShortcut = false;
       this.showMenu();
@@ -108,16 +110,22 @@ export class NgxTextAutocompleteDirective implements OnDestroy {
   }
 
   @HostListener('keydown', ['$event'])
-  onKeyDown(event: KeyboardEvent) {
-    if (this.keyboardShortcut && this.keyboardShortcut(event)) {
+  onKeyDown(event: Event) {
+    const kbEvent = event as KeyboardEvent;
+    if (this.keyboardShortcut && this.keyboardShortcut(kbEvent)) {
       this.usingShortcut = true;
       this.showMenu();
-      this.onChange('');
+      this.handleValueChange('');
     }
   }
 
-  @HostListener('input', ['$event.target.value'])
-  onChange(value: string) {
+  @HostListener('input', ['$event'])
+  onChange(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.handleValueChange(value);
+  }
+
+  private handleValueChange(value: string) {
     if (!this.menu) {
       return
     }

@@ -2,10 +2,9 @@ import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import {Subject} from "rxjs";
 
 @Component({
-  selector: 'ngx-text-autocomplete-menu',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'ngx-text-autocomplete-menu',
+    imports: [],
+    template: `
 
     @if (choices.length) {
       <ul
@@ -27,7 +26,7 @@ import {Subject} from "rxjs";
     }
 
   `,
-  styles: `
+    styles: `
     .dropdown-menu {
       display: block;
       max-height: 400px;
@@ -61,7 +60,7 @@ export class NgxTextAutocompleteMenuComponent {
     choice.id !== undefined ? choice.id : choice;
 
   @HostListener('document:keydown.ArrowDown', ['$event'])
-  onArrowDown(event: KeyboardEvent) {
+  onArrowDown(event: Event) {
     event.preventDefault();
     const index = this.choices.indexOf(this.activeChoice);
     if (this.choices[index + 1]) {
@@ -70,7 +69,7 @@ export class NgxTextAutocompleteMenuComponent {
   }
 
   @HostListener('document:keydown.ArrowUp', ['$event'])
-  onArrowUp(event: KeyboardEvent) {
+  onArrowUp(event: Event) {
     event.preventDefault();
     const index = this.choices.indexOf(this.activeChoice);
     if (this.choices[index - 1]) {
@@ -79,7 +78,7 @@ export class NgxTextAutocompleteMenuComponent {
   }
 
   @HostListener('document:keydown.Enter', ['$event'])
-  onEnter(event: KeyboardEvent) {
+  onEnter(event: Event) {
     if (this.choices.indexOf(this.activeChoice) > -1) {
       event.preventDefault();
       this.selectChoice.next(this.activeChoice);
